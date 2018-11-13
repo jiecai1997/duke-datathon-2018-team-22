@@ -30,18 +30,18 @@ Credit Sesame, a service that offers free credit score and credit report analyse
 
 ## Components
 - **A. Jupyter Notebook** 
-  - Description: Code composing of our data wrangling, model building and model evaluation process.
+  - Description: Code composing of data wrangling, model building and model evaluation process.
   - Files: Jupyter Notebook code in .ipynb & .pdf format
   - Location: `team22_jupyter` folder
 - **B. Tableau Dashboard**
-  - Description: Visual representation of our most important user conversion metrics.
+  - Description: Visual representation of key user conversion metrics.
   - Files: Tableau Dashboard in .twb & .pdf format
   - Location: `team22_tableau` folder
 - **C. Report** 
-  - Description: 5-page Written Report documenting our procedures and outcomes, used for first-round judging.
+  - Description: 5-page Written Report documenting procedures and outcomes, used for first-round judging.
   - Files: Written Report in .docx & .pdf format
   - Location: `team22_report` folder
 - **D. Presentation**
-  - Description: 8-slide Powerpoint to summarize our procedures and outcomes, presented during final-round judging.
+  - Description: 8-slide Powerpoint summarizing procedures and outcomes, presented during final-round judging.
   - Files: Presentation in .ppt & .pdf format
   - Location: `team22_presentation` folder
