@@ -1,0 +1,3223 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<workbook original-version='18.1' source-build='2018.2.0 (20182.18.0627.2230)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='user_engagement' inline='true' name='federated.0mx415y1jn98bw1fzdoer094e3i3' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='user_engagement' name='textscan.17kcdyj0ibqhh11gk9qtp0a0muhf'>
+            <connection class='textscan' directory='/Users/catiegrasse/Desktop/dataset' filename='user_engagement.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[user_engagement.csv].[user_id]' />
+              <expression op='[user_profile.csv].[user_id]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.17kcdyj0ibqhh11gk9qtp0a0muhf' name='user_engagement.csv' table='[user_engagement#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='session_id' ordinal='1' />
+              <column datatype='string' name='user_id' ordinal='2' />
+              <column datatype='integer' name='session_length' ordinal='3' />
+              <column datatype='integer' name='view_count' ordinal='4' />
+              <column datatype='integer' name='view_aoop_overview_count' ordinal='5' />
+              <column datatype='integer' name='view_my_credit_count' ordinal='6' />
+              <column datatype='integer' name='view_credit_monitoring_count' ordinal='7' />
+              <column datatype='integer' name='view_my_recommendations_count' ordinal='8' />
+              <column datatype='integer' name='view_my_borrowing_power_count' ordinal='9' />
+              <column datatype='integer' name='view_cc_best_cards_count' ordinal='10' />
+              <column datatype='integer' name='view_my_debt_count' ordinal='11' />
+              <column datatype='integer' name='view_cc_my_borrowing_power_count' ordinal='12' />
+              <column datatype='integer' name='view_cc_approval_odds_count' ordinal='13' />
+              <column datatype='integer' name='view_cc_details_count' ordinal='14' />
+              <column datatype='integer' name='view_my_credit_report_count' ordinal='15' />
+              <column datatype='integer' name='view_increase_total_credit_limit_count' ordinal='16' />
+              <column datatype='integer' name='view_cc_marketplace_count' ordinal='17' />
+              <column datatype='integer' name='view_alert_count' ordinal='18' />
+              <column datatype='integer' name='click_count' ordinal='19' />
+              <column datatype='integer' name='click_count_credit_card' ordinal='20' />
+              <column datatype='integer' name='click_count_personal_loan' ordinal='21' />
+              <column datatype='integer' name='click_count_mortgage' ordinal='22' />
+              <column datatype='integer' name='click_count_credit_repair' ordinal='23' />
+              <column datatype='integer' name='click_count_banking' ordinal='24' />
+              <column datatype='integer' name='click_count_auto_products' ordinal='25' />
+              <column datatype='integer' name='click_apply_count' ordinal='26' />
+              <column datatype='integer' name='click_count_credit_card.1' ordinal='27' />
+              <column datatype='integer' name='click_count_personal_loan.1' ordinal='28' />
+              <column datatype='integer' name='click_count_mortgage.1' ordinal='29' />
+              <column datatype='integer' name='click_count_credit_repair.1' ordinal='30' />
+              <column datatype='integer' name='click_count_banking.1' ordinal='31' />
+              <column datatype='integer' name='click_count_auto_products.1' ordinal='32' />
+              <column datatype='integer' name='logged_in_count' ordinal='33' />
+              <column datatype='datetime' name='session_start_timestamp' ordinal='34' />
+              <column datatype='string' name='city' ordinal='35' />
+              <column datatype='string' name='state' ordinal='36' />
+              <column datatype='string' name='browser_name' ordinal='37' />
+              <column datatype='real' name='browser_version' ordinal='38' />
+              <column datatype='date' name='app_version' ordinal='39' />
+              <column datatype='string' name='login_platform' ordinal='40' />
+              <column datatype='string' name='os_name' ordinal='41' />
+            </columns>
+          </relation>
+          <relation connection='textscan.17kcdyj0ibqhh11gk9qtp0a0muhf' name='user_profile.csv' table='[user_profile#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Unnamed: 0' ordinal='0' />
+              <column datatype='string' name='user_id' ordinal='1' />
+              <column datatype='datetime' name='user_signup_timestamp' ordinal='2' />
+              <column datatype='string' name='state' ordinal='3' />
+              <column datatype='integer' name='zipcode' ordinal='4' />
+              <column datatype='boolean' name='is_homeowner' ordinal='5' />
+              <column datatype='string' name='gender' ordinal='6' />
+              <column datatype='real' name='tradelines_avg_days_since_opened' ordinal='7' />
+              <column datatype='real' name='tradelines_max_days_since_opened' ordinal='8' />
+              <column datatype='real' name='tradelines_min_days_since_opened' ordinal='9' />
+              <column datatype='integer' name='count_tradelines_closed_accounts' ordinal='10' />
+              <column datatype='integer' name='count_total_tradelines_opened_24_months' ordinal='11' />
+              <column datatype='integer' name='count_tradelines_cc_opened_24_months' ordinal='12' />
+              <column datatype='integer' name='count_tradelines_condition_derogatory' ordinal='13' />
+              <column datatype='integer' name='count_open_installment_accounts_24_months' ordinal='14' />
+              <column datatype='integer' name='count_tradelines_open_collection_accounts' ordinal='15' />
+              <column datatype='integer' name='count_tradelines_open_mortgages' ordinal='16' />
+              <column datatype='integer' name='count_tradelines_open_student_loans' ordinal='17' />
+              <column datatype='integer' name='count_tradelines_opened_accounts' ordinal='18' />
+              <column datatype='integer' name='count_tradelines_open_secured_loans' ordinal='19' />
+              <column datatype='integer' name='count_tradelines_open_unsecured_loans' ordinal='20' />
+              <column datatype='real' name='total_tradelines_amount_past_due' ordinal='21' />
+              <column datatype='real' name='total_open_cc_amount_past_due' ordinal='22' />
+              <column datatype='real' name='total_cc_open_balance' ordinal='23' />
+              <column datatype='real' name='total_tradelines_open_balance' ordinal='24' />
+              <column datatype='real' name='max_cc_limit' ordinal='25' />
+              <column datatype='real' name='max_cc_utilization_ratio' ordinal='26' />
+              <column datatype='real' name='avg_cc_utilization_ratio' ordinal='27' />
+              <column datatype='real' name='total_mortgage_loans_amount' ordinal='28' />
+              <column datatype='real' name='total_mortgage_loans_balance' ordinal='29' />
+              <column datatype='real' name='total_auto_loans_balance' ordinal='30' />
+              <column datatype='real' name='total_student_loans_balance' ordinal='31' />
+              <column datatype='integer' name='count_inquiries_3_months' ordinal='32' />
+              <column datatype='integer' name='count_inquiries_6_months' ordinal='33' />
+              <column datatype='integer' name='count_inquiries_12_months' ordinal='34' />
+              <column datatype='datetime' name='recent_bankruptcy_date' ordinal='35' />
+              <column datatype='integer' name='count_bankruptcy' ordinal='36' />
+              <column datatype='string' name='age_bucket' ordinal='37' />
+              <column datatype='string' name='credit_score_bucket' ordinal='38' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[F1]' value='[user_engagement.csv].[F1]' />
+          <map key='[Unnamed: 0]' value='[user_profile.csv].[Unnamed: 0]' />
+          <map key='[age_bucket]' value='[user_profile.csv].[age_bucket]' />
+          <map key='[app_version]' value='[user_engagement.csv].[app_version]' />
+          <map key='[avg_cc_utilization_ratio]' value='[user_profile.csv].[avg_cc_utilization_ratio]' />
+          <map key='[browser_name]' value='[user_engagement.csv].[browser_name]' />
+          <map key='[browser_version]' value='[user_engagement.csv].[browser_version]' />
+          <map key='[city]' value='[user_engagement.csv].[city]' />
+          <map key='[click_apply_count]' value='[user_engagement.csv].[click_apply_count]' />
+          <map key='[click_count]' value='[user_engagement.csv].[click_count]' />
+          <map key='[click_count_auto_products.1]' value='[user_engagement.csv].[click_count_auto_products.1]' />
+          <map key='[click_count_auto_products]' value='[user_engagement.csv].[click_count_auto_products]' />
+          <map key='[click_count_banking.1]' value='[user_engagement.csv].[click_count_banking.1]' />
+          <map key='[click_count_banking]' value='[user_engagement.csv].[click_count_banking]' />
+          <map key='[click_count_credit_card.1]' value='[user_engagement.csv].[click_count_credit_card.1]' />
+          <map key='[click_count_credit_card]' value='[user_engagement.csv].[click_count_credit_card]' />
+          <map key='[click_count_credit_repair.1]' value='[user_engagement.csv].[click_count_credit_repair.1]' />
+          <map key='[click_count_credit_repair]' value='[user_engagement.csv].[click_count_credit_repair]' />
+          <map key='[click_count_mortgage.1]' value='[user_engagement.csv].[click_count_mortgage.1]' />
+          <map key='[click_count_mortgage]' value='[user_engagement.csv].[click_count_mortgage]' />
+          <map key='[click_count_personal_loan.1]' value='[user_engagement.csv].[click_count_personal_loan.1]' />
+          <map key='[click_count_personal_loan]' value='[user_engagement.csv].[click_count_personal_loan]' />
+          <map key='[count_bankruptcy]' value='[user_profile.csv].[count_bankruptcy]' />
+          <map key='[count_inquiries_12_months]' value='[user_profile.csv].[count_inquiries_12_months]' />
+          <map key='[count_inquiries_3_months]' value='[user_profile.csv].[count_inquiries_3_months]' />
+          <map key='[count_inquiries_6_months]' value='[user_profile.csv].[count_inquiries_6_months]' />
+          <map key='[count_open_installment_accounts_24_months]' value='[user_profile.csv].[count_open_installment_accounts_24_months]' />
+          <map key='[count_total_tradelines_opened_24_months]' value='[user_profile.csv].[count_total_tradelines_opened_24_months]' />
+          <map key='[count_tradelines_cc_opened_24_months]' value='[user_profile.csv].[count_tradelines_cc_opened_24_months]' />
+          <map key='[count_tradelines_closed_accounts]' value='[user_profile.csv].[count_tradelines_closed_accounts]' />
+          <map key='[count_tradelines_condition_derogatory]' value='[user_profile.csv].[count_tradelines_condition_derogatory]' />
+          <map key='[count_tradelines_open_collection_accounts]' value='[user_profile.csv].[count_tradelines_open_collection_accounts]' />
+          <map key='[count_tradelines_open_mortgages]' value='[user_profile.csv].[count_tradelines_open_mortgages]' />
+          <map key='[count_tradelines_open_secured_loans]' value='[user_profile.csv].[count_tradelines_open_secured_loans]' />
+          <map key='[count_tradelines_open_student_loans]' value='[user_profile.csv].[count_tradelines_open_student_loans]' />
+          <map key='[count_tradelines_open_unsecured_loans]' value='[user_profile.csv].[count_tradelines_open_unsecured_loans]' />
+          <map key='[count_tradelines_opened_accounts]' value='[user_profile.csv].[count_tradelines_opened_accounts]' />
+          <map key='[credit_score_bucket]' value='[user_profile.csv].[credit_score_bucket]' />
+          <map key='[gender]' value='[user_profile.csv].[gender]' />
+          <map key='[is_homeowner]' value='[user_profile.csv].[is_homeowner]' />
+          <map key='[logged_in_count]' value='[user_engagement.csv].[logged_in_count]' />
+          <map key='[login_platform]' value='[user_engagement.csv].[login_platform]' />
+          <map key='[max_cc_limit]' value='[user_profile.csv].[max_cc_limit]' />
+          <map key='[max_cc_utilization_ratio]' value='[user_profile.csv].[max_cc_utilization_ratio]' />
+          <map key='[os_name]' value='[user_engagement.csv].[os_name]' />
+          <map key='[recent_bankruptcy_date]' value='[user_profile.csv].[recent_bankruptcy_date]' />
+          <map key='[session_id]' value='[user_engagement.csv].[session_id]' />
+          <map key='[session_length]' value='[user_engagement.csv].[session_length]' />
+          <map key='[session_start_timestamp]' value='[user_engagement.csv].[session_start_timestamp]' />
+          <map key='[state (user_profile.csv)]' value='[user_profile.csv].[state]' />
+          <map key='[state]' value='[user_engagement.csv].[state]' />
+          <map key='[total_auto_loans_balance]' value='[user_profile.csv].[total_auto_loans_balance]' />
+          <map key='[total_cc_open_balance]' value='[user_profile.csv].[total_cc_open_balance]' />
+          <map key='[total_mortgage_loans_amount]' value='[user_profile.csv].[total_mortgage_loans_amount]' />
+          <map key='[total_mortgage_loans_balance]' value='[user_profile.csv].[total_mortgage_loans_balance]' />
+          <map key='[total_open_cc_amount_past_due]' value='[user_profile.csv].[total_open_cc_amount_past_due]' />
+          <map key='[total_student_loans_balance]' value='[user_profile.csv].[total_student_loans_balance]' />
+          <map key='[total_tradelines_amount_past_due]' value='[user_profile.csv].[total_tradelines_amount_past_due]' />
+          <map key='[total_tradelines_open_balance]' value='[user_profile.csv].[total_tradelines_open_balance]' />
+          <map key='[tradelines_avg_days_since_opened]' value='[user_profile.csv].[tradelines_avg_days_since_opened]' />
+          <map key='[tradelines_max_days_since_opened]' value='[user_profile.csv].[tradelines_max_days_since_opened]' />
+          <map key='[tradelines_min_days_since_opened]' value='[user_profile.csv].[tradelines_min_days_since_opened]' />
+          <map key='[user_id (user_profile.csv)]' value='[user_profile.csv].[user_id]' />
+          <map key='[user_id]' value='[user_engagement.csv].[user_id]' />
+          <map key='[user_signup_timestamp]' value='[user_profile.csv].[user_signup_timestamp]' />
+          <map key='[view_alert_count]' value='[user_engagement.csv].[view_alert_count]' />
+          <map key='[view_aoop_overview_count]' value='[user_engagement.csv].[view_aoop_overview_count]' />
+          <map key='[view_cc_approval_odds_count]' value='[user_engagement.csv].[view_cc_approval_odds_count]' />
+          <map key='[view_cc_best_cards_count]' value='[user_engagement.csv].[view_cc_best_cards_count]' />
+          <map key='[view_cc_details_count]' value='[user_engagement.csv].[view_cc_details_count]' />
+          <map key='[view_cc_marketplace_count]' value='[user_engagement.csv].[view_cc_marketplace_count]' />
+          <map key='[view_cc_my_borrowing_power_count]' value='[user_engagement.csv].[view_cc_my_borrowing_power_count]' />
+          <map key='[view_count]' value='[user_engagement.csv].[view_count]' />
+          <map key='[view_credit_monitoring_count]' value='[user_engagement.csv].[view_credit_monitoring_count]' />
+          <map key='[view_increase_total_credit_limit_count]' value='[user_engagement.csv].[view_increase_total_credit_limit_count]' />
+          <map key='[view_my_borrowing_power_count]' value='[user_engagement.csv].[view_my_borrowing_power_count]' />
+          <map key='[view_my_credit_count]' value='[user_engagement.csv].[view_my_credit_count]' />
+          <map key='[view_my_credit_report_count]' value='[user_engagement.csv].[view_my_credit_report_count]' />
+          <map key='[view_my_debt_count]' value='[user_engagement.csv].[view_my_debt_count]' />
+          <map key='[view_my_recommendations_count]' value='[user_engagement.csv].[view_my_recommendations_count]' />
+          <map key='[zipcode]' value='[user_profile.csv].[zipcode]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>session_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[session_id]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>session_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>session_length</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[session_length]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>session_length</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_count</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_aoop_overview_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_aoop_overview_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_aoop_overview_count</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_my_credit_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_my_credit_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_my_credit_count</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_credit_monitoring_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_credit_monitoring_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_credit_monitoring_count</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_my_recommendations_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_my_recommendations_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_my_recommendations_count</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_my_borrowing_power_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_my_borrowing_power_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_my_borrowing_power_count</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_cc_best_cards_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_cc_best_cards_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_cc_best_cards_count</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_my_debt_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_my_debt_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_my_debt_count</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_cc_my_borrowing_power_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_cc_my_borrowing_power_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_cc_my_borrowing_power_count</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_cc_approval_odds_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_cc_approval_odds_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_cc_approval_odds_count</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_cc_details_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_cc_details_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_cc_details_count</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_my_credit_report_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_my_credit_report_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_my_credit_report_count</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_increase_total_credit_limit_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_increase_total_credit_limit_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_increase_total_credit_limit_count</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_cc_marketplace_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_cc_marketplace_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_cc_marketplace_count</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>view_alert_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[view_alert_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>view_alert_count</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_credit_card</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_credit_card]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_credit_card</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_personal_loan</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_personal_loan]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_personal_loan</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_mortgage</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_mortgage]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_mortgage</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_credit_repair</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_credit_repair]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_credit_repair</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_banking</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_banking]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_banking</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_auto_products</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_auto_products]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_auto_products</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_apply_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_apply_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_apply_count</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_credit_card.1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_credit_card.1]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_credit_card.1</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_personal_loan.1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_personal_loan.1]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_personal_loan.1</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_mortgage.1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_mortgage.1]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_mortgage.1</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_credit_repair.1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_credit_repair.1]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_credit_repair.1</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_banking.1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_banking.1]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_banking.1</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>click_count_auto_products.1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[click_count_auto_products.1]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>click_count_auto_products.1</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>logged_in_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[logged_in_count]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>logged_in_count</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>session_start_timestamp</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[session_start_timestamp]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>session_start_timestamp</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>browser_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[browser_name]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>browser_name</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>browser_version</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[browser_version]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>browser_version</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>app_version</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[app_version]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>app_version</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>login_platform</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[login_platform]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>login_platform</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>os_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[os_name]</local-name>
+            <parent-name>[user_engagement.csv]</parent-name>
+            <remote-alias>os_name</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unnamed: 0</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Unnamed: 0]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>Unnamed: 0</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[user_id (user_profile.csv)]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_signup_timestamp</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[user_signup_timestamp]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>user_signup_timestamp</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state (user_profile.csv)]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zipcode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zipcode]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>zipcode</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_homeowner</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_homeowner]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>is_homeowner</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tradelines_avg_days_since_opened</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tradelines_avg_days_since_opened]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>tradelines_avg_days_since_opened</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tradelines_max_days_since_opened</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tradelines_max_days_since_opened]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>tradelines_max_days_since_opened</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tradelines_min_days_since_opened</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tradelines_min_days_since_opened]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>tradelines_min_days_since_opened</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_tradelines_closed_accounts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_tradelines_closed_accounts]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_tradelines_closed_accounts</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_total_tradelines_opened_24_months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_total_tradelines_opened_24_months]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_total_tradelines_opened_24_months</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_tradelines_cc_opened_24_months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_tradelines_cc_opened_24_months]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_tradelines_cc_opened_24_months</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_tradelines_condition_derogatory</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_tradelines_condition_derogatory]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_tradelines_condition_derogatory</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_open_installment_accounts_24_months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_open_installment_accounts_24_months]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_open_installment_accounts_24_months</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_tradelines_open_collection_accounts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_tradelines_open_collection_accounts]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_tradelines_open_collection_accounts</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_tradelines_open_mortgages</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_tradelines_open_mortgages]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_tradelines_open_mortgages</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_tradelines_open_student_loans</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_tradelines_open_student_loans]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_tradelines_open_student_loans</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_tradelines_opened_accounts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_tradelines_opened_accounts]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_tradelines_opened_accounts</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_tradelines_open_secured_loans</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_tradelines_open_secured_loans]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_tradelines_open_secured_loans</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_tradelines_open_unsecured_loans</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_tradelines_open_unsecured_loans]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_tradelines_open_unsecured_loans</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_tradelines_amount_past_due</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_tradelines_amount_past_due]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>total_tradelines_amount_past_due</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_open_cc_amount_past_due</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_open_cc_amount_past_due]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>total_open_cc_amount_past_due</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_cc_open_balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_cc_open_balance]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>total_cc_open_balance</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_tradelines_open_balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_tradelines_open_balance]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>total_tradelines_open_balance</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_cc_limit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[max_cc_limit]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>max_cc_limit</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_cc_utilization_ratio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[max_cc_utilization_ratio]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>max_cc_utilization_ratio</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_cc_utilization_ratio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_cc_utilization_ratio]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>avg_cc_utilization_ratio</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_mortgage_loans_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_mortgage_loans_amount]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>total_mortgage_loans_amount</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_mortgage_loans_balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_mortgage_loans_balance]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>total_mortgage_loans_balance</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_auto_loans_balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_auto_loans_balance]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>total_auto_loans_balance</remote-alias>
+            <ordinal>72</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_student_loans_balance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_student_loans_balance]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>total_student_loans_balance</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_inquiries_3_months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_inquiries_3_months]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_inquiries_3_months</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_inquiries_6_months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_inquiries_6_months]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_inquiries_6_months</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_inquiries_12_months</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_inquiries_12_months]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_inquiries_12_months</remote-alias>
+            <ordinal>76</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recent_bankruptcy_date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[recent_bankruptcy_date]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>recent_bankruptcy_date</remote-alias>
+            <ordinal>77</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_bankruptcy</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_bankruptcy]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>count_bankruptcy</remote-alias>
+            <ordinal>78</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age_bucket</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[age_bucket]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>age_bucket</remote-alias>
+            <ordinal>79</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>credit_score_bucket</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[credit_score_bucket]</local-name>
+            <parent-name>[user_profile.csv]</parent-name>
+            <remote-alias>credit_score_bucket</remote-alias>
+            <ordinal>80</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_auto_products:qk]&quot;' value='Auto Products' />
+          <alias key='&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_banking:qk]&quot;' value='Banking' />
+          <alias key='&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_credit_card:qk]&quot;' value='Credit Card' />
+          <alias key='&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_credit_repair:qk]&quot;' value='Credit Repair' />
+          <alias key='&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_mortgage:qk]&quot;' value='Mortgage' />
+          <alias key='&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_personal_loan:qk]&quot;' value='Personal Loan' />
+        </aliases>
+      </column>
+      <column caption='User_Applied' datatype='string' name='[Calculation_1381971823978078208]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [click_apply_count] &gt; 0 THEN &quot;1&quot;&#10;&#10;ELSE &quot;0&quot;&#10;&#10;END' />
+        <aliases>
+          <alias key='&quot;0&quot;' value='User did not apply' />
+          <alias key='&quot;1&quot;' value='User applied' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Age Bucket' datatype='string' name='[age_bucket]' role='dimension' type='nominal' />
+      <column caption='App Version' datatype='date' name='[app_version]' role='dimension' type='ordinal' />
+      <column caption='Avg Cc Utilization Ratio' datatype='real' name='[avg_cc_utilization_ratio]' role='measure' type='quantitative' />
+      <column caption='Browser Name' datatype='string' name='[browser_name]' role='dimension' type='nominal' />
+      <column caption='Browser Version' datatype='real' name='[browser_version]' role='measure' type='quantitative' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Click Apply Count' datatype='integer' name='[click_apply_count]' role='measure' type='quantitative' />
+      <column caption='Click Count' datatype='integer' name='[click_count]' role='measure' type='quantitative' />
+      <column caption='Click Count Auto Products.1' datatype='integer' name='[click_count_auto_products.1]' role='measure' type='quantitative' />
+      <column caption='Click Count Auto Products' datatype='integer' name='[click_count_auto_products]' role='measure' type='quantitative' />
+      <column caption='Click Count Banking.1' datatype='integer' name='[click_count_banking.1]' role='measure' type='quantitative' />
+      <column caption='Click Count Banking' datatype='integer' name='[click_count_banking]' role='measure' type='quantitative' />
+      <column caption='Click Count Credit Card.1' datatype='integer' name='[click_count_credit_card.1]' role='measure' type='quantitative' />
+      <column caption='Click Count Credit Card' datatype='integer' name='[click_count_credit_card]' role='measure' type='quantitative' />
+      <column caption='Click Count Credit Repair.1' datatype='integer' name='[click_count_credit_repair.1]' role='measure' type='quantitative' />
+      <column caption='Click Count Credit Repair' datatype='integer' name='[click_count_credit_repair]' role='measure' type='quantitative' />
+      <column caption='Click Count Mortgage.1' datatype='integer' name='[click_count_mortgage.1]' role='measure' type='quantitative' />
+      <column caption='Click Count Mortgage' datatype='integer' name='[click_count_mortgage]' role='measure' type='quantitative' />
+      <column caption='Click Count Personal Loan.1' datatype='integer' name='[click_count_personal_loan.1]' role='measure' type='quantitative' />
+      <column caption='Click Count Personal Loan' datatype='integer' name='[click_count_personal_loan]' role='measure' type='quantitative' />
+      <column caption='Count Bankruptcy' datatype='integer' name='[count_bankruptcy]' role='measure' type='quantitative' />
+      <column caption='Count Inquiries 12 Months' datatype='integer' name='[count_inquiries_12_months]' role='measure' type='quantitative' />
+      <column caption='Count Inquiries 3 Months' datatype='integer' name='[count_inquiries_3_months]' role='measure' type='quantitative' />
+      <column caption='Count Inquiries 6 Months' datatype='integer' name='[count_inquiries_6_months]' role='measure' type='quantitative' />
+      <column caption='Count Open Installment Accounts 24 Months' datatype='integer' name='[count_open_installment_accounts_24_months]' role='measure' type='quantitative' />
+      <column caption='Count Total Tradelines Opened 24 Months' datatype='integer' name='[count_total_tradelines_opened_24_months]' role='measure' type='quantitative' />
+      <column caption='Count Tradelines Cc Opened 24 Months' datatype='integer' name='[count_tradelines_cc_opened_24_months]' role='measure' type='quantitative' />
+      <column caption='Count Tradelines Closed Accounts' datatype='integer' name='[count_tradelines_closed_accounts]' role='measure' type='quantitative' />
+      <column caption='Count Tradelines Condition Derogatory' datatype='integer' name='[count_tradelines_condition_derogatory]' role='measure' type='quantitative' />
+      <column caption='Count Tradelines Open Collection Accounts' datatype='integer' name='[count_tradelines_open_collection_accounts]' role='measure' type='quantitative' />
+      <column caption='Count Tradelines Open Mortgages' datatype='integer' name='[count_tradelines_open_mortgages]' role='measure' type='quantitative' />
+      <column caption='Count Tradelines Open Secured Loans' datatype='integer' name='[count_tradelines_open_secured_loans]' role='measure' type='quantitative' />
+      <column caption='Count Tradelines Open Student Loans' datatype='integer' name='[count_tradelines_open_student_loans]' role='measure' type='quantitative' />
+      <column caption='Count Tradelines Open Unsecured Loans' datatype='integer' name='[count_tradelines_open_unsecured_loans]' role='measure' type='quantitative' />
+      <column caption='Count Tradelines Opened Accounts' datatype='integer' name='[count_tradelines_opened_accounts]' role='measure' type='quantitative' />
+      <column caption='Credit Score Bucket' datatype='string' name='[credit_score_bucket]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Is Homeowner' datatype='boolean' name='[is_homeowner]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='false' value='Not a Homeowner' />
+          <alias key='true' value='Homeowner' />
+        </aliases>
+      </column>
+      <column caption='Logged In Count' datatype='integer' name='[logged_in_count]' role='measure' type='quantitative' />
+      <column caption='Login Platform' datatype='string' name='[login_platform]' role='dimension' type='nominal' />
+      <column caption='Max Cc Limit' datatype='real' name='[max_cc_limit]' role='measure' type='quantitative' />
+      <column caption='Max Cc Utilization Ratio' datatype='real' name='[max_cc_utilization_ratio]' role='measure' type='quantitative' />
+      <column caption='Os Name' datatype='string' name='[os_name]' role='dimension' type='nominal' />
+      <column caption='Recent Bankruptcy Date' datatype='datetime' name='[recent_bankruptcy_date]' role='dimension' type='ordinal' />
+      <column caption='Session Id' datatype='string' name='[session_id]' role='dimension' type='nominal' />
+      <column caption='Session Length' datatype='integer' name='[session_length]' role='measure' type='quantitative' />
+      <column caption='Session Start Timestamp' datatype='datetime' name='[session_start_timestamp]' role='dimension' type='ordinal' />
+      <column caption='State (User Profile.Csv)' datatype='string' name='[state (user_profile.csv)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Total Auto Loans Balance' datatype='real' name='[total_auto_loans_balance]' role='measure' type='quantitative' />
+      <column caption='Total Cc Open Balance' datatype='real' name='[total_cc_open_balance]' role='measure' type='quantitative' />
+      <column caption='Total Mortgage Loans Amount' datatype='real' name='[total_mortgage_loans_amount]' role='measure' type='quantitative' />
+      <column caption='Total Mortgage Loans Balance' datatype='real' name='[total_mortgage_loans_balance]' role='measure' type='quantitative' />
+      <column caption='Total Open Cc Amount Past Due' datatype='real' name='[total_open_cc_amount_past_due]' role='measure' type='quantitative' />
+      <column caption='Total Student Loans Balance' datatype='real' name='[total_student_loans_balance]' role='measure' type='quantitative' />
+      <column caption='Total Tradelines Amount Past Due' datatype='real' name='[total_tradelines_amount_past_due]' role='measure' type='quantitative' />
+      <column caption='Total Tradelines Open Balance' datatype='real' name='[total_tradelines_open_balance]' role='measure' type='quantitative' />
+      <column caption='Tradelines Avg Days Since Opened' datatype='real' name='[tradelines_avg_days_since_opened]' role='measure' type='quantitative' />
+      <column caption='Tradelines Max Days Since Opened' datatype='real' name='[tradelines_max_days_since_opened]' role='measure' type='quantitative' />
+      <column caption='Tradelines Min Days Since Opened' datatype='real' name='[tradelines_min_days_since_opened]' role='measure' type='quantitative' />
+      <column caption='User Id (User Profile.Csv)' datatype='string' name='[user_id (user_profile.csv)]' role='dimension' type='nominal' />
+      <column caption='User Id' datatype='string' name='[user_id]' role='dimension' type='nominal' />
+      <column caption='User Signup Timestamp' datatype='datetime' name='[user_signup_timestamp]' role='dimension' type='ordinal' />
+      <column caption='View Alert Count' datatype='integer' name='[view_alert_count]' role='measure' type='quantitative' />
+      <column caption='View Aoop Overview Count' datatype='integer' name='[view_aoop_overview_count]' role='measure' type='quantitative' />
+      <column caption='View Cc Approval Odds Count' datatype='integer' name='[view_cc_approval_odds_count]' role='measure' type='quantitative' />
+      <column caption='View Cc Best Cards Count' datatype='integer' name='[view_cc_best_cards_count]' role='measure' type='quantitative' />
+      <column caption='View Cc Details Count' datatype='integer' name='[view_cc_details_count]' role='measure' type='quantitative' />
+      <column caption='View Cc Marketplace Count' datatype='integer' name='[view_cc_marketplace_count]' role='measure' type='quantitative' />
+      <column caption='View Cc My Borrowing Power Count' datatype='integer' name='[view_cc_my_borrowing_power_count]' role='measure' type='quantitative' />
+      <column caption='View Count' datatype='integer' name='[view_count]' role='measure' type='quantitative' />
+      <column caption='View Credit Monitoring Count' datatype='integer' name='[view_credit_monitoring_count]' role='measure' type='quantitative' />
+      <column caption='View Increase Total Credit Limit Count' datatype='integer' name='[view_increase_total_credit_limit_count]' role='measure' type='quantitative' />
+      <column caption='View My Borrowing Power Count' datatype='integer' name='[view_my_borrowing_power_count]' role='measure' type='quantitative' />
+      <column caption='View My Credit Count' datatype='integer' name='[view_my_credit_count]' role='measure' type='quantitative' />
+      <column caption='View My Credit Report Count' datatype='integer' name='[view_my_credit_report_count]' role='measure' type='quantitative' />
+      <column caption='View My Debt Count' datatype='integer' name='[view_my_debt_count]' role='measure' type='quantitative' />
+      <column caption='View My Recommendations Count' datatype='integer' name='[view_my_recommendations_count]' role='measure' type='quantitative' />
+      <column caption='Zipcode' datatype='integer' default-format='*00000' name='[zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[click_apply_count]' derivation='Avg' name='[avg:click_apply_count:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[click_count_auto_products]' derivation='Avg' name='[avg:click_count_auto_products:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[click_count_banking]' derivation='Avg' name='[avg:click_count_banking:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[click_count_credit_card]' derivation='Avg' name='[avg:click_count_credit_card:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[click_count_mortgage]' derivation='Avg' name='[avg:click_count_mortgage:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[click_count_personal_loan]' derivation='Avg' name='[avg:click_count_personal_loan:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_1381971823978078208]' derivation='None' name='[none:Calculation_1381971823978078208:nk]' pivot='key' type='nominal' />
+      <column-instance column='[browser_name]' derivation='None' name='[none:browser_name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[is_homeowner]' derivation='None' name='[none:is_homeowner:nk]' pivot='key' type='nominal' />
+      <column-instance column='[login_platform]' derivation='None' name='[none:login_platform:nk]' pivot='key' type='nominal' />
+      <column-instance column='[click_count_auto_products]' derivation='Sum' name='[sum:click_count_auto_products:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[click_count_banking]' derivation='Sum' name='[sum:click_count_banking:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[click_count_credit_card]' derivation='Sum' name='[sum:click_count_credit_card:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[click_count_credit_repair]' derivation='Sum' name='[sum:click_count_credit_repair:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[click_count_mortgage]' derivation='Sum' name='[sum:click_count_mortgage:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[click_count_personal_loan]' derivation='Sum' name='[sum:click_count_personal_loan:qk]' pivot='key' type='quantitative' />
+      <drill-paths>
+        <drill-path name='state, city'>
+          <field>[state]</field>
+          <field>[city]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.382759' measure-ordering='alphabetic' measure-percentage='0.617241' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:login_platform:nk]' palette='winter_10_0' type='palette'>
+            <map to='#b173a0'>
+              <bucket>&quot;Web&quot;</bucket>
+            </map>
+            <map to='#b9a0b4'>
+              <bucket>&quot;Mobile Web&quot;</bucket>
+            </map>
+            <map to='#c46487'>
+              <bucket>&quot;Mobile App&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:browser_name:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Chrome 11&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Chrome 31&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Chrome 35&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Firefox 24&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Firefox 44&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Internet Explorer&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Apple WebKit&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Chrome 48&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Firefox 11&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Firefox 36&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Microsoft Edge&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Silk&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Chrome 26&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Chrome 27&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Chrome 28&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Firefox 20&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Firefox 40&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Firefox Mobile&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Chrome 15&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Chrome 39&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Firefox 28&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Firefox 3&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Opera 28&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Opera Mini&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Chrome 12&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Chrome 32&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Chrome 36&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Firefox 25&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Firefox 45&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Microsoft Edge Mobile 12&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Chrome 30&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Chrome 8&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Firefox 16&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Firefox 21&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Firefox 41&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Firefox Mobile (iOS)&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Chrome 21&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Chrome 41&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Chrome 46&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Firefox 34&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Internet Explorer 10&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Safari 8&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;BlackBerry&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Chrome 23&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Chrome 49&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Firefox 12&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Firefox 37&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Microsoft Edge 12&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Chrome 19&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Chrome 44&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Firefox 32&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Firefox 7&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Internet Explorer 8&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Safari 6&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Chrome 29&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Chrome 33&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Chrome 9&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Firefox 22&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Firefox 42&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;IE Mobile 10&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Chrome 16&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Chrome 40&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Firefox 29&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Firefox 4&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Opera 29&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Opera Mobile&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Chrome 17&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Chrome 42&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Firefox 30&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Firefox 5&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Opera 30&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Safari&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Safari 4&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Chrome 20&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Chrome 45&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Firefox 33&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Firefox 8&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Internet Explorer 9&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Safari 7&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Chrome 22&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Chrome 47&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Firefox 35&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Firefox 9&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Internet Explorer 11&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Safari 9&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Chrome 13&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Chrome 37&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Firefox 1.5&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Firefox 26&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mobile Safari&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mozilla&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Chrome 10&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Chrome 34&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Firefox 17&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Firefox 23&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Firefox 43&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;IE Mobile 11&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CFNetwork&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Chrome 24&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Chrome Mobile&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Firefox 14&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Firefox 38&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Microsoft Edge 13&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Vivaldi&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Chrome 18&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Chrome 43&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Firefox 31&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Firefox 6&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Internet Explorer 7&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Unknown&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Chrome 14&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Chrome 38&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Firefox 2&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Firefox 27&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Opera&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Opera 27&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Chrome&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Chrome 25&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Firefox&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Firefox 15&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Firefox 39&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Opera 34&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:is_homeowner:nk]' palette='purple_pink_gray_10_0' type='palette'>
+            <map to='#b173a0'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#ffbed1'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' palette='purple_pink_gray_10_0' type='palette'>
+            <map to='#8074a8'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_auto_products:qk]&quot;</bucket>
+            </map>
+            <map to='#90728f'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_apply_count:qk]&quot;</bucket>
+            </map>
+            <map to='#9c9290'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_mortgage:qk]&quot;</bucket>
+            </map>
+            <map to='#9d9b3d'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count_banking:qk]&quot;</bucket>
+            </map>
+            <map to='#aa8780'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count_mortgage:qk]&quot;</bucket>
+            </map>
+            <map to='#b9a0b4'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count_auto_products:qk]&quot;</bucket>
+            </map>
+            <map to='#c46487'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_credit_card:qk]&quot;</bucket>
+            </map>
+            <map to='#c5bfbe'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_personal_loan:qk]&quot;</bucket>
+            </map>
+            <map to='#c6c1f0'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_banking:qk]&quot;</bucket>
+            </map>
+            <map to='#cecb76'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count_credit_card:qk]&quot;</bucket>
+            </map>
+            <map to='#dab6af'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count_personal_loan:qk]&quot;</bucket>
+            </map>
+            <map to='#ffbed1'>
+              <bucket>&quot;[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:click_count_credit_repair:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_1381971823978078208:nk]' palette='purple_pink_gray_10_0' type='palette'>
+            <map to='#b173a0'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+            <map to='#c6c1f0'>
+              <bucket>&quot;0&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource inline='true' name='Clipboard_20181027T155823' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Clipboard_20181027T155823' name='Clipboard_20181027T155823leaf'>
+            <connection class='textscan' directory='/Users/catiegrasse/Documents/My Tableau Repository/Datasources/Clipboard_20181027T155823' />
+          </named-connection>
+        </named-connections>
+        <relation connection='Clipboard_20181027T155823leaf' name='Clipboard_20181027T155823#txt' table='[Clipboard_20181027T155823#txt]' type='table' />
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.500867' measure-ordering='alphabetic' measure-percentage='0.499133' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Click Count Analysis'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='user_engagement' name='federated.0mx415y1jn98bw1fzdoer094e3i3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mx415y1jn98bw1fzdoer094e3i3'>
+            <column caption='User_Applied' datatype='string' name='[Calculation_1381971823978078208]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [click_apply_count] &gt; 0 THEN &quot;1&quot;&#10;&#10;ELSE &quot;0&quot;&#10;&#10;END' />
+              <aliases>
+                <alias key='&quot;0&quot;' value='User did not apply' />
+                <alias key='&quot;1&quot;' value='User applied' />
+              </aliases>
+            </column>
+            <column-instance column='[session_length]' derivation='Avg' name='[avg:session_length:qk]' pivot='key' type='quantitative' />
+            <column caption='Click Apply Count' datatype='integer' name='[click_apply_count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1381971823978078208]' derivation='None' name='[none:Calculation_1381971823978078208:nk]' pivot='key' type='nominal' />
+            <column caption='Session Length' datatype='integer' name='[session_length]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;0&quot;</bucket>
+              <bucket>&quot;1&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:session_length:qk]' scope='rows' value='Average Session Length' />
+            <format attr='width' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:session_length:qk]' value='60' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'>If the &lt;</run>
+                <run bold='true'>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</run>
+                <run bold='true'>&gt;, the average session length on Credit Sesame is &lt;</run>
+                <run bold='true'>[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:session_length:qk]</run>
+                <run bold='true'>&gt; seconds.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='167' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:session_length:qk]</rows>
+        <cols>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Cross Platform Engagement'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='user_engagement' name='federated.0mx415y1jn98bw1fzdoer094e3i3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mx415y1jn98bw1fzdoer094e3i3'>
+            <column caption='User_Applied' datatype='string' name='[Calculation_1381971823978078208]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [click_apply_count] &gt; 0 THEN &quot;1&quot;&#10;&#10;ELSE &quot;0&quot;&#10;&#10;END' />
+              <aliases>
+                <alias key='&quot;0&quot;' value='User did not apply' />
+                <alias key='&quot;1&quot;' value='User applied' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Click Apply Count' datatype='integer' name='[click_apply_count]' role='measure' type='quantitative' />
+            <column caption='Login Platform' datatype='string' name='[login_platform]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1381971823978078208]' derivation='None' name='[none:Calculation_1381971823978078208:nk]' pivot='key' type='nominal' />
+            <column-instance column='[login_platform]' derivation='None' name='[none:login_platform:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1381971823978078208:nk]' member='&quot;1&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]' palette='purple_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]' />
+              <color column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]' />
+              <text column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:login_platform:nk]' />
+              <text column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'>&lt;[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]&gt; of users use the &lt;[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:login_platform:nk]&gt; platform.</run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='10' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Dual'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='user_engagement' name='federated.0mx415y1jn98bw1fzdoer094e3i3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mx415y1jn98bw1fzdoer094e3i3'>
+            <column caption='User_Applied' datatype='string' name='[Calculation_1381971823978078208]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [click_apply_count] &gt; 0 THEN &quot;1&quot;&#10;&#10;ELSE &quot;0&quot;&#10;&#10;END' />
+              <aliases>
+                <alias key='&quot;0&quot;' value='User did not apply' />
+                <alias key='&quot;1&quot;' value='User applied' />
+              </aliases>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Click Apply Count' datatype='integer' name='[click_apply_count]' role='measure' type='quantitative' />
+            <column caption='Login Platform' datatype='string' name='[login_platform]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1381971823978078208]' derivation='None' name='[none:Calculation_1381971823978078208:nk]' pivot='key' type='nominal' />
+            <column-instance column='[login_platform]' derivation='None' name='[none:login_platform:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1381971823978078208:nk]' member='&quot;0&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]' palette='purple_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]' />
+              <color column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]' />
+              <text column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:login_platform:nk]' />
+              <text column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'>&lt;</run>
+                <run bold='true'>[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]</run>
+                <run bold='true'>&gt; of users use the &lt;</run>
+                <run bold='true'>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:login_platform:nk]</run>
+                <run bold='true'>&gt; platform.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Tableau Book' />
+                <format attr='font-size' value='10' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Session Length Analysis'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='user_engagement' name='federated.0mx415y1jn98bw1fzdoer094e3i3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mx415y1jn98bw1fzdoer094e3i3'>
+            <column caption='User_Applied' datatype='string' name='[Calculation_1381971823978078208]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [click_apply_count] &gt; 0 THEN &quot;1&quot;&#10;&#10;ELSE &quot;0&quot;&#10;&#10;END' />
+              <aliases>
+                <alias key='&quot;0&quot;' value='User did not apply' />
+                <alias key='&quot;1&quot;' value='User applied' />
+              </aliases>
+            </column>
+            <column-instance column='[click_count]' derivation='Avg' name='[avg:click_count:qk]' pivot='key' type='quantitative' />
+            <column caption='Click Apply Count' datatype='integer' name='[click_apply_count]' role='measure' type='quantitative' />
+            <column caption='Click Count' datatype='integer' name='[click_count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1381971823978078208]' derivation='None' name='[none:Calculation_1381971823978078208:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' direction='ASC' using='[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count:qk]' scope='rows' value='Average Click Count' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#1b1b1b'>If the &lt;</run>
+                <run bold='true' fontcolor='#1b1b1b'>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</run>
+                <run bold='true' fontcolor='#1b1b1b'>&gt;, the average click count is &lt;</run>
+                <run bold='true' fontcolor='#1b1b1b'>[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count:qk]</run>
+                <run bold='true' fontcolor='#1b1b1b'>&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='167' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count:qk]</rows>
+        <cols>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='user_engagement' name='federated.0mx415y1jn98bw1fzdoer094e3i3' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0mx415y1jn98bw1fzdoer094e3i3'>
+            <column caption='User_Applied' datatype='string' name='[Calculation_1381971823978078208]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [click_apply_count] &gt; 0 THEN &quot;1&quot;&#10;&#10;ELSE &quot;0&quot;&#10;&#10;END' />
+              <aliases>
+                <alias key='&quot;0&quot;' value='User did not apply' />
+                <alias key='&quot;1&quot;' value='User applied' />
+              </aliases>
+            </column>
+            <column caption='Age Bucket' datatype='string' name='[age_bucket]' role='dimension' type='nominal' />
+            <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column caption='Click Apply Count' datatype='integer' name='[click_apply_count]' role='measure' type='quantitative' />
+            <column caption='Credit Score Bucket' datatype='string' name='[credit_score_bucket]' role='dimension' type='nominal' />
+            <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_1381971823978078208]' derivation='None' name='[none:Calculation_1381971823978078208:nk]' pivot='key' type='nominal' />
+            <column-instance column='[age_bucket]' derivation='None' name='[none:age_bucket:nk]' pivot='key' type='nominal' />
+            <column-instance column='[city]' derivation='None' name='[none:city:nk]' pivot='key' type='nominal' />
+            <column-instance column='[credit_score_bucket]' derivation='None' name='[none:credit_score_bucket:nk]' pivot='key' type='nominal' />
+            <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]'>
+            <groupfilter function='level-members' level='[none:Calculation_1381971823978078208:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:age_bucket:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:age_bucket:nk]' member='&quot;(20.0, 25.0]&quot;' />
+              <groupfilter function='member' level='[none:age_bucket:nk]' member='&quot;(55.0, 60.0]&quot;' />
+              <groupfilter function='member' level='[none:age_bucket:nk]' member='&quot;(65.0, 70.0]&quot;' />
+              <groupfilter function='member' level='[none:age_bucket:nk]' member='&quot;(70.0, 75.0]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:credit_score_bucket:nk]'>
+            <groupfilter function='level-members' level='[none:credit_score_bucket:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:gender:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;Female&quot;' />
+              <groupfilter function='member' level='[none:gender:nk]' member='&quot;Male&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</column>
+            <column>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:gender:nk]</column>
+            <column>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:age_bucket:nk]</column>
+            <column>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:credit_score_bucket:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[Longitude (generated)]' field-type='quantitative' max='-7663077.3118308196' min='-14839339.551374173' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[Latitude (generated)]' field-type='quantitative' max='7090539.5610893015' min='2007010.5119523923' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' value=''>
+              <formatted-text />
+            </format>
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='false' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='false' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.10000000149011612' />
+            <format attr='map-style' value='tableau-light-gray' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' value='Applied for Services:'>
+              <formatted-text>
+                <run>Applied for Services:</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' />
+              <lod column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:state:nk]' />
+              <lod column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:city:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'>This user is from &lt;</run>
+                <run bold='true'>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:city:nk]</run>
+                <run bold='true'>&gt;, &lt;</run>
+                <run bold='true'>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:state:nk]</run>
+                <run bold='true'>&gt;.</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.42779004573822021' />
+                <format attr='mark-transparency' value='124' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mx415y1jn98bw1fzdoer094e3i3].[Latitude (generated)]</rows>
+        <cols>[federated.0mx415y1jn98bw1fzdoer094e3i3].[Longitude (generated)]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='user_engagement' name='federated.0mx415y1jn98bw1fzdoer094e3i3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mx415y1jn98bw1fzdoer094e3i3'>
+            <column caption='User_Applied' datatype='string' name='[Calculation_1381971823978078208]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [click_apply_count] &gt; 0 THEN &quot;1&quot;&#10;&#10;ELSE &quot;0&quot;&#10;&#10;END' />
+              <aliases>
+                <alias key='&quot;0&quot;' value='User did not apply' />
+                <alias key='&quot;1&quot;' value='User applied' />
+              </aliases>
+            </column>
+            <column caption='Click Apply Count' datatype='integer' name='[click_apply_count]' role='measure' type='quantitative' />
+            <column caption='Count Total Tradelines Opened 24 Months' datatype='integer' name='[count_total_tradelines_opened_24_months]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1381971823978078208]' derivation='None' name='[none:Calculation_1381971823978078208:nk]' pivot='key' type='nominal' />
+            <column-instance column='[count_total_tradelines_opened_24_months]' derivation='Sum' name='[sum:count_total_tradelines_opened_24_months:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;0&quot;</bucket>
+              <bucket>&quot;1&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:count_total_tradelines_opened_24_months:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#555555' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='206' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.7801104784011841' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mx415y1jn98bw1fzdoer094e3i3].[sum:count_total_tradelines_opened_24_months:qk]</rows>
+        <cols>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</cols>
+        <percentages enabled='true' mode='row' />
+      </table>
+    </worksheet>
+    <worksheet name='View Count Analysis'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='user_engagement' name='federated.0mx415y1jn98bw1fzdoer094e3i3' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mx415y1jn98bw1fzdoer094e3i3'>
+            <column caption='User_Applied' datatype='string' name='[Calculation_1381971823978078208]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [click_apply_count] &gt; 0 THEN &quot;1&quot;&#10;&#10;ELSE &quot;0&quot;&#10;&#10;END' />
+              <aliases>
+                <alias key='&quot;0&quot;' value='User did not apply' />
+                <alias key='&quot;1&quot;' value='User applied' />
+              </aliases>
+            </column>
+            <column-instance column='[click_count]' derivation='Avg' name='[avg:click_count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[view_count]' derivation='Avg' name='[avg:view_count:qk]' pivot='key' type='quantitative' />
+            <column caption='Click Apply Count' datatype='integer' name='[click_apply_count]' role='measure' type='quantitative' />
+            <column caption='Click Count' datatype='integer' name='[click_count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1381971823978078208]' derivation='None' name='[none:Calculation_1381971823978078208:nk]' pivot='key' type='nominal' />
+            <column caption='View Count' datatype='integer' name='[view_count]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' direction='ASC' using='[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:view_count:qk]' scope='rows' value='Average View Count' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true'>If the &lt;</run>
+                <run bold='true'>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</run>
+                <run bold='true'>&gt;, the average click count is &lt;</run>
+                <run bold='true'>[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:view_count:qk]</run>
+                <run bold='true'>&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-transparency' value='167' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:view_count:qk]</rows>
+        <cols>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Final' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='1037' id='3' type='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='1867' />
+            <zone h='86826' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='12344'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Understanding what drives users to apply for services' captured-sheet='Visualization' id='1' />
+                  <story-point caption='Visualizing geographic data' captured-sheet='Geographic' id='2'>
+                    <capturedDeltas>
+                      <dashboard name='Geographic'>
+                        <zone id='3'>
+                          <formatted-text>
+                            <run fontcolor='#333333' fontsize='11'>Though location wasn&apos;t a strong indicator of whether or not a user applied for a service on Credit Sesame, it is an interesting variable to visually examine to better understand the general user profile of Credit Sesame users. Use the interactive graphic below to better understand the distribution of Credit Sesame users. You can zoom in and out on areas of interest and explore using different filters.</run>
+                          </formatted-text>
+                        </zone>
+                      </dashboard>
+                      <worksheet name='Sheet 10'>
+                        <filter class='categorical' column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:age_bucket:nk]'>
+                          <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+                            <groupfilter function='level-members' level='[none:age_bucket:nk]' />
+                            <groupfilter function='union'>
+                              <groupfilter function='member' level='[none:age_bucket:nk]' member='&quot;(35.0, 40.0]&quot;' />
+                              <groupfilter function='member' level='[none:age_bucket:nk]' member='&quot;(40.0, 45.0]&quot;' />
+                            </groupfilter>
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:credit_score_bucket:nk]'>
+                          <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                            <groupfilter from='&quot;(495.0, 500.0]&quot;' function='range' level='[none:credit_score_bucket:nk]' to='&quot;(505.0, 510.0]&quot;' />
+                            <groupfilter from='&quot;(515.0, 520.0]&quot;' function='range' level='[none:credit_score_bucket:nk]' to='&quot;(525.0, 530.0]&quot;' />
+                            <groupfilter from='&quot;(535.0, 540.0]&quot;' function='range' level='[none:credit_score_bucket:nk]' to='&quot;(545.0, 550.0]&quot;' />
+                            <groupfilter from='&quot;(555.0, 560.0]&quot;' function='range' level='[none:credit_score_bucket:nk]' to='&quot;(795.0, 800.0]&quot;' />
+                          </groupfilter>
+                        </filter>
+                        <filter class='categorical' column='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:gender:nk]'>
+                          <groupfilter function='level-members' level='[none:gender:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+                        </filter>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[Latitude (generated)]' field-type='quantitative' max='6936527.2994651981' min='906646.9959810588' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[Longitude (generated)]' field-type='quantitative' max='-6720261.1917998027' min='-15230176.197137063' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Geographic'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='user_engagement' name='federated.0mx415y1jn98bw1fzdoer094e3i3' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0mx415y1jn98bw1fzdoer094e3i3'>
+        <column caption='User_Applied' datatype='string' name='[Calculation_1381971823978078208]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='IF [click_apply_count] &gt; 0 THEN &quot;1&quot;&#10;&#10;ELSE &quot;0&quot;&#10;&#10;END' />
+          <aliases>
+            <alias key='&quot;0&quot;' value='User did not apply' />
+            <alias key='&quot;1&quot;' value='User applied' />
+          </aliases>
+        </column>
+        <column caption='Age Bucket' datatype='string' name='[age_bucket]' role='dimension' type='nominal' />
+        <column caption='Credit Score Bucket' datatype='string' name='[credit_score_bucket]' role='dimension' type='nominal' />
+        <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+        <column-instance column='[Calculation_1381971823978078208]' derivation='None' name='[none:Calculation_1381971823978078208:nk]' pivot='key' type='nominal' />
+        <column-instance column='[age_bucket]' derivation='None' name='[none:age_bucket:nk]' pivot='key' type='nominal' />
+        <column-instance column='[credit_score_bucket]' derivation='None' name='[none:credit_score_bucket:nk]' pivot='key' type='nominal' />
+        <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='26625' id='2' type='text' w='47700' x='200' y='-750'>
+          <formatted-text>
+            <run fontcolor='#813676' fontsize='36'>Predicting Prospective </run>
+            <run bold='true' fontcolor='#813676' fontsize='36'>Credit Sesame</run>
+            <run fontcolor='#813676' fontsize='36'> Users</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='15125' id='3' type='text' w='53800' x='300' y='25000'>
+          <formatted-text>
+            <run fontcolor='#333333' fontsize='11'>Though location wasn&apos;t a strong indicator of whether or not a user applied for a service on Credit Sesame, it is an interesting variable to visually examine to better understand the general user profile of Credit Sesame users. Use the interactive graphic below to better understand the distribution of Credit Sesame users.</run>
+          </formatted-text>
+        </zone>
+        <zone h='66875' id='4' name='Sheet 10' w='73400' x='-10400' y='42125' />
+        <zone h='67000' id='9' name='Sheet 10' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:credit_score_bucket:nk]' type='filter' w='16800' x='81300' y='22125' />
+        <zone h='67125' id='10' name='Sheet 10' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:age_bucket:nk]' type='filter' w='15200' x='64000' y='24625' />
+        <zone h='11125' id='12' name='Sheet 10' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' type='filter' w='16500' x='81700' y='9125' />
+        <zone h='15875' id='11' name='Sheet 10' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:gender:nk]' type='filter' w='16800' x='63500' y='7875' />
+      </zones>
+    </dashboard>
+    <dashboard name='Visualization'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#ffffff' />
+        </style-rule>
+      </style>
+      <size maxheight='710' maxwidth='1377' minheight='710' minwidth='1377' sizing-mode='fixed' />
+      <zones>
+        <zone forceUpdate='true' h='29296' id='2' type='text' w='36456' x='944' y='-1549'>
+          <formatted-text>
+            <run fontcolor='#813676' fontname='Tableau Light' fontsize='36'>Predicting Prospective </run>
+            <run bold='true' fontcolor='#813676' fontname='Tableau Light' fontsize='36'>Credit Sesame</run>
+            <run fontcolor='#813676' fontname='Tableau Light' fontsize='36'> Users</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='20141' id='3' type='text' w='39797' x='726' y='27887'>
+          <formatted-text>
+            <run fontcolor='#555555' fontsize='11'>Credit Sesame is a free personal finance tool that allows users to access financial information and assists in services such as credit score monitoring, home loans, and identity theft protection. When users visit the Credit Sesame website or use the mobile application, they are able to apply for certain services. </run>
+            <run>Æ&#10;&#10;</run>
+            <run bold='true' fontcolor='#333333' fontsize='11'>What characteristics define users that apply for services on Credit Sesame?</run>
+          </formatted-text>
+        </zone>
+        <zone h='34789' id='4' name='Session Length Analysis' w='12854' x='436' y='49437' />
+        <zone h='36620' id='5' name='Click Count Analysis' w='13290' x='12636' y='48169' />
+        <zone h='31268' id='6' name='View Count Analysis' w='12564' x='25781' y='52254' />
+        <zone forceUpdate='true' h='10000' id='7' type='text' w='39143' x='1307' y='83803'>
+          <formatted-text>
+            <run fontcolor='#333333' fontsize='10'>On average, users who apply for a service on Credit Sesame tend to have higher click counts, view more pages, and spend more time on the CreditSesame application than users who do not apply for a service.</run>
+          </formatted-text>
+        </zone>
+        <zone h='27183' id='8' name='Cross Platform Engagement' w='24982' x='42847' y='7183' />
+        <zone h='31268' id='9' name='Dual' show-title='false' w='27233' x='42847' y='43380' />
+        <zone forceUpdate='true' h='6197' id='10' type='text' w='23675' x='42919' y='2113'>
+          <formatted-text>
+            <run fontsize='11'>Platform Use of Users who Applied for a Service</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='5915' id='11' type='text' w='22948' x='42992' y='36197'>
+          <formatted-text>
+            <run fontcolor='#555555' fontsize='11'>Platform Choice of Users who Did Not Apply for a Service</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='12535' id='12' type='text' w='29702' x='42702' y='74789'>
+          <formatted-text>
+            <run fontcolor='#333333' fontsize='10'>All users generally access CreditSesame from the Mobile Web platform. Users who apply for a service on Credit Sesame are even more likely to prefer the Mobile Web application over the Mobile App and Website.</run>
+          </formatted-text>
+        </zone>
+        <zone h='74930' id='13' name='Sheet 6' w='17647' x='72767' y='9296' />
+        <zone forceUpdate='true' h='7042' id='19' type='text' w='9877' x='72404' y='1831'>
+          <formatted-text>
+            <run fontcolor='#333333' fontsize='11'>Total Tradelines Open Balance</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='17042' id='20' type='text' w='16340' x='74365' y='81690'>
+          <formatted-text>
+            <run fontcolor='#1b1b1b' fontsize='10'>Cumulatively, users that apply for services under Credit Sesame have less total debt than users that choose not to apply.</run>
+          </formatted-text>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='dashboard' maximized='true' name='Final'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+    <window class='worksheet' hidden='true' name='Click Count Analysis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Cross Platform Engagement'>
+      <cards>
+        <edge name='left'>
+          <strip size='295'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:login_platform:nk]</field>
+                  <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Mobile Web&quot;</value>
+                <value>0.72742230172471523</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</field>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Dual'>
+      <cards>
+        <edge name='left'>
+          <strip size='295'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:login_platform:nk]</field>
+                  <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Mobile Web&quot;</value>
+                <value>0.58154849242596462</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</field>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[pcto:sum:Number of Records:qk:2]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='dashboard' hidden='true' name='Geographic'>
+      <viewpoints>
+        <viewpoint name='Sheet 10'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='10' />
+    </window>
+    <window class='worksheet' hidden='true' name='Session Length Analysis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:credit_score_bucket:nk]' type='filter' />
+            <card param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:age_bucket:nk]' type='filter' />
+            <card param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:gender:nk]' type='filter' />
+            <card param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</field>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:age_bucket:nk]</field>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:city:nk]</field>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:credit_score_bucket:nk]</field>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:gender:nk]</field>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:state:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</field>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:is_homeowner:nk]</field>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:state (user_profile.csv):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' hidden='true' name='View Count Analysis'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:view_count:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:click_count:qk]</field>
+                  <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[avg:view_count:qk]</field>
+                  <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>9.5650140139086854</value>
+                <value>7.366753077798716</value>
+                <value>&quot;1&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='dashboard' hidden='true' name='Visualization'>
+      <viewpoints>
+        <viewpoint name='Click Count Analysis'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Cross Platform Engagement'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Dual' />
+        <viewpoint name='Session Length Analysis'>
+          <highlight field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Sheet 6'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0mx415y1jn98bw1fzdoer094e3i3].[none:Calculation_1381971823978078208:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='View Count Analysis'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Final' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
