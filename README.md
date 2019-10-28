@@ -1,7 +1,8 @@
 #  Team 22, Duke Datathon 2018
 
 
-🥇1st Place Team 📈 Big Data Energy
+🥇1st Place Team
+📈 Big Data Energy
 
 ## Background
 [Duke Datathon](http://dukeml.org/datathon/) participants have a 8-hour time limit to analyze a given data prompt in any
