@@ -1,12 +1,10 @@
 #  Team 22, Duke Datathon 2018
 
 
-🥇Winning Team
-
-📈 Big Data Energy
+🥇1st Place Team 📈 Big Data Energy
 
 ## Background
-[Duke Datathon](http://dukeml.org/datathon/) participants have a 8-hour time limit to analyze and/or visualize a given data prompt in any
+[Duke Datathon](http://dukeml.org/datathon/) participants have a 8-hour time limit to analyze a given data prompt in any
 creative and insightful way. The 2018 Dataset is provided by [Credit Sesame](https://www.creditsesame.com/), a credit-reporting website. Participants were given the following 3 datasets:
 - **A. User Profile**
   - Description: Snapshot of the user’s demographic and credit profile information at the time of signup.
